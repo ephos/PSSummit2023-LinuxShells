@@ -1,0 +1,6 @@
+#!/bin/pwsh
+
+message="Hello Summit from Powershell!"
+echo "$message"
+
+df -h | grep "/boot"

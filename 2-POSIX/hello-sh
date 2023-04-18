@@ -1,0 +1,6 @@
+#!/bin/sh
+
+message="Hello Summit from the Bourne Shell!"
+echo "$message"
+
+df -h | grep "/boot"
