@@ -1,18 +1,21 @@
 # PowerShell Crescendo
 
+From the help file `about_Crescendo`:
+"The PowerShell Crescendo module provides a novel way to create proxy functions for native commands via JSON configuration files."
+
+> _"Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should." -Dr. Ian Malcolm_
+
 Crescendo:
 
 - Don't overthink Crescendo and remember the 4 questions here!!!
 - Well documented [schema](https://aka.ms/PowerShell/Crescendo/Schemas/2021-11)
-  * Allows LSP autocomplete in your IDE of choice (NeoVim/VS Code)
+  * Allows LSP autocomplete in your IDE of choice (_NeoVim/VS Code_)
 - Contains some great examples
   * _/.local/share/powershell/Modules/Microsoft.PowerShell.Crescendo/1.0.0/Samples/_
 
 ## ls
 
-```pwsh
-
-```
+An example wrapper for `ls` is one of the provided examples.
 
 ## pacman
 
