@@ -1,0 +1,32 @@
+{
+   "$schema" : "https://aka.ms/PowerShell/Crescendo/Schemas/2021-11",
+   "Commands": [
+        {
+            "Verb" : "Invoke",
+            "Noun": "PacmanUpdate",
+            "OriginalName": "/usr/bin/pacman",
+            "Elevation": {
+                "Required": true,
+                "Reason": "This command requires elevation.",
+                "Command": "sudo" 
+            },
+            "Parameters": [
+                {
+                    "Name" : "Sync",
+                    "OriginalName" : "-S",
+                    "ParameterType" : "switch"
+                },
+                {
+                    "Name": "Upgrade",
+                    "OriginalName": "-u",
+                    "ParameterType": "switch"
+                },
+                {
+                    "Name": "Refresh",
+                    "OriginalName": "-y",
+                    "ParameterType": "switch"
+                }
+            ]
+        }
+    ]
+}
