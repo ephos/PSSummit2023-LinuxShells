@@ -1,0 +1,38 @@
+{
+   "$schema" : "https://aka.ms/PowerShell/Crescendo/Schemas/2021-11",
+   "Commands": [
+        {
+            "Verb" : "Get",
+            "Noun": "SystemCtlUnit",
+            "OriginalName": "/usr/bin/systemctl",
+            "OriginalCommandElements": [
+                "list-units",
+                "--no-legend",
+                "--no-pager",
+                "--type=service"
+            ],
+            "Elevation": {
+                "Required": true,
+                "Reason": "This command requires elevation.",
+                "Command": "sudo" 
+            },
+            "Parameters": [
+                {
+                    "OriginalName": "",
+                    "Name": "Name",
+                    "ParameterType": "string",
+                    "NoGap": true,
+                    "Description": "Name of Service Unit"
+                }
+            ],
+            "OutputHandlers": [
+                {
+                    "ParameterSetName": "Default",
+                    "HandlerType": "Function",
+                    "Handler": "ParseSystemCtl"
+                }
+            ]
+        }
+    ]
+}
+
