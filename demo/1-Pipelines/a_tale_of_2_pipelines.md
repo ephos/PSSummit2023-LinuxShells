@@ -62,6 +62,6 @@ $data = Import-Csv -Path ./us_county_pop2022.csv | Select-Object STATE, CITY, @{
 Note/Side Rant: PowerShell is syntactically _verbose_
 
 No architecture is inherently right or wrong, this was a deliberate design choice for PowerShell
-This design is detailed within Jeffery Snovers Monad manifesto!
+This design is detailed within Jeffery Snover's Monad manifesto!
 
 - [Monad Manifesto](https://jsnover.com/Docs/MonadManifesto.pdf)
