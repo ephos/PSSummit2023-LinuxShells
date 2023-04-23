@@ -23,7 +23,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix)):
 > When a text file with a shebang is used as if it is an executable in a Unix-like operating system,
 > the program loader mechanism parses the rest of the file's initial line as an interpreter directive. 
 
-The following files are all marked as executable with a **Shebang** / `#!` to the specified shell.
+---
 
 ### POSIX Compliant
 
@@ -49,6 +49,8 @@ cat hello-ksh
 
 The following scripts will execute with Non-POSIX compliant shells.
 
+---
+
 ### Not POSIX Compliant
 
 ```bash
@@ -63,7 +65,9 @@ cat hello-pwsh
 ./hello-pwsh
 ```
 
+---
+
 If PowerShell (or Fish) were to adhere to POSIX compliance standards, 
 then the declaration of the variable would have worked.
 
-Bonus: [Watch People Argue Over POSIX Compliance](https://news.ycombinator.com/item?id=26744919)
+*Bonus*: [Watch People Argue Over POSIX Compliance](https://news.ycombinator.com/item?id=26744919)

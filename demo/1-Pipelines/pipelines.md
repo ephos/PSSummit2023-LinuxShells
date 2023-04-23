@@ -1,4 +1,6 @@
-# A Tale of 2 Pipeline (Architectures)
+# Pipelines 
+
+A.K.A - *A Tale of 2 Pipeline (Architectures)*
 
 Fundamentally typical Linux/Unix shells that are POSIX compliant utilize STDIO byte/data streams.
 
@@ -59,7 +61,9 @@ $data | Where-Object {$_.STATE -eq 'Massachusetts'} | Sort-Object -Property {[in
 $data = Import-Csv -Path ./us_county_pop2022.csv | Select-Object STATE, CITY, @{Name="POP";Expression={[int]$_.POP}}
 ```
 
-Note/Side Rant: PowerShell is syntactically _verbose_
+---
+
+*Note/Side Rant*: PowerShell is syntactically _verbose_.
 
 No architecture is inherently right or wrong, this was a deliberate design choice for PowerShell
 This design is detailed within Jeffery Snover's Monad manifesto!

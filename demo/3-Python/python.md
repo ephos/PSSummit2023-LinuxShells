@@ -8,11 +8,7 @@ The interpreter is only able to interpret Python and nothing else.
 
 You can drop into the python interpreter console:
 
-```pwsh
-glow python.md
-
-python
-```
+Just type `python` in your current shell (needs to be in `PATH`)
 
 ---
 
@@ -36,9 +32,7 @@ uname -a
 Xonsh is a shell that natively interprets Python as well as being able to 
 execute native utilities (much like PowerShell).
 
-```pwsh
-xonsh
-```
+Since `xonsh` isn't my default shell I will switch to it.
 
 ---
 
