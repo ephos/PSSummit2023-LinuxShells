@@ -20,20 +20,28 @@ This enabled 3 data streams:
 
 This is pretty neat-o since it allowed passing of data between utilities!
 
-## Data/Byte Streams
+---
+
+### Shell/Bash - Data/Byte Streams
+
+This is a simple and typical pipeline in 
 
 ```bash
 # Byte Stream Pipelining
 
-# cat to read the contents of the file 'ma_towns.csv'
-# grep the lines containing the string 'Worcester'
-# sort the filtered lines on column 8 'Year_Established' as a numerical value
+# cat to read the contents of the file 'us_county_pop2022'
+# grep the lines containing the string 'Massachusetts'
+# sort the filtered lines on column 3 'POP', as a numerical value, descending
 cat ./us_county_pop2022.csv | grep "Massachusetts" | sort -t',' -k3nr
 ```
 
-## Structured .Net Objects
+---
 
-```pwsh
+## PowerShell - Structured .Net Objects
+
+We can see the same process using PowerShell.
+
+```bash
 # Get the CSV data and de-serialize it into objects
 $data = Import-Csv -Path ./us_county_pop2022.csv
 
