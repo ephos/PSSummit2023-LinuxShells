@@ -1,7 +1,9 @@
 # PowerShell Crescendo
 
 From the help file `about_Crescendo`:
-"The PowerShell Crescendo module provides a novel way to create proxy functions for native commands via JSON configuration files."
+> "The PowerShell Crescendo module provides a novel way to create proxy functions for native commands via JSON configuration files."
+
+and...
 
 > _"Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should." -Dr. Ian Malcolm_
 
@@ -24,7 +26,7 @@ Pacman is the Arch Linux package manager.
 
 Let's convert it to feel more PowerShell-y _(oh gosh why are we doing this?)_
 
-```pwsh
+```bash
 # Export the module based on our config file
 Export-CrescendoModule -ConfigurationFile ./pacman.Crescendo.json -ModuleName pspacman
 
@@ -46,7 +48,7 @@ Lets take an example with slightly easier to parse output.
 Please don't judge the awkward string manipulation!
 This is part of the challenge potentially of converting a native command.
 
-```pwsh
+```bash
 # Source the Parser function into memory!
 . ./ParseSystemCtl
 

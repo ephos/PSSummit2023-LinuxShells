@@ -1,6 +1,0 @@
-#!/bin/bash
-
-message="Hello Summit from Bash!"
-echo "$message"
-
-df -h | grep "/boot"

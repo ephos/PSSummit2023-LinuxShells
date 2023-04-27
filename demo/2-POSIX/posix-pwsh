@@ -1,0 +1,21 @@
+#!/bin/pwsh
+
+message="Hello Summit from pwsh / PowerShell!"
+echo "$message"
+
+a=5
+b=5
+
+echo "POSIX Compliant code:"
+if [ "$a" -eq "$b" ]; then
+    tput setaf 2
+    echo "Numbers are Equal!"
+    tput sgr0
+fi
+
+echo "Not strictly POSIX Compliant code:"
+if [[ $a == $b ]]; then
+    tput setaf 2
+    echo "Numbers are Equal!"
+    tput sgr0
+fi

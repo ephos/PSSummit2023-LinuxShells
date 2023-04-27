@@ -1,6 +1,0 @@
-#!/bin/fish
-
-message="Hello Summit from Fish!"
-echo "$message"
-
-df -h | grep "/boot"

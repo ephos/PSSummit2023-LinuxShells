@@ -1,6 +1,0 @@
-#!/bin/zsh
-
-message="Hello Summit from Zsh!"
-echo "$message"
-
-df -h | grep "/boot"

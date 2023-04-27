@@ -10,23 +10,24 @@ Hold your horses we'll get to that right after this!
 Shells that adhere to this byte stream pipeline architecture commonly include:
 
 - sh (Bourne Shell)
+- dash (Debian Almquist Shell)
 - bash (Bourne Again Shell)
 - zsh
 
 Commonly utilities for Unix written in C leveraged STDIO / `stdio.h`.
-This enabled 3 data streams:
+This enabled 3 communication streams:
 
 - STDIN
 - STDOUT
 - STDERR
 
-This is pretty neat-o since it allowed passing of data between utilities!
+This is pretty neat since it allowed passing of data between utilities!
 
 ---
 
 ### Shell/Bash - Data/Byte Streams
 
-This is a simple and typical pipeline in 
+This is a simple and typical pipeline in bash.
 
 ```bash
 # Byte Stream Pipelining
@@ -64,6 +65,10 @@ $data = Import-Csv -Path ./us_county_pop2022.csv | Select-Object STATE, CITY, @{
 ---
 
 *Note/Side Rant*: PowerShell is syntactically _verbose_.
+
+```bash
+$data | ? STATE -eq 'Massachusetts' | sort -prop {[int]$_.POP} -desc
+```
 
 No architecture is inherently right or wrong, this was a deliberate design choice for PowerShell
 This design is detailed within Jeffery Snover's Monad manifesto!

@@ -4,19 +4,28 @@
 
 - POSIX is the ***P***ortable ***O***perating ***S***ystem ***I***nterface
   * Defined by the IEEE
+  * Specific to the shell/terminal is **1003.1-2017**
   * [IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008 and formally POSIX.2)](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18)
-- A series of standards for Unix-like operating systems
-  * Came from a time when multiple major variants of Unix were around
-  * Defines common commands like `echo`, `test`, `expr`..
-    + Also reserved words/keywords like `if`, `while`, `for`
 - A baseline set of standards that would operate consistently on all Unix-like operating systems
-- Defined standards for:
-  * User level programs, services and utilities
-  * Program level specifications for basic I/O, **terminal** and network operations
+  * Defined standards for:
+    + User level programs, services and utilities
+      + Defines common commands like `echo`, `test`, `expr`..
+    + Also reserved words/keywords like `if`, `while`, `for`
+    + Program level specifications for basic I/O, **terminal** and network operations
+
+- POSIX is effectively bare minimum standards
 
 ## POSIX Compliant and Non-Compliant Shells
 
-The following scripts have a Shebang `#!` so they know what shell to be interpreted in.
+- `dash` is strictly POSIX complaint
+- `bash` is POSIX compliant but has functionality beyond POSIX compliance standards
+  * Careful of 'bashisms', this functionality is not POSIX compliance (like use of `[[]]`)
+  * `test` with `[]` = POSIX ✅
+  * `test` with `[[]]` = Not POSIX ❌ 
+
+### Quick Note on Shebang
+
+The scripts below have a Shebang `#!` so they know what shell to be interpreted in.
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix)):
 
@@ -25,49 +34,31 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix)):
 
 ---
 
-### POSIX Compliant
+## POSIX Compliance Test
 
 ```bash
-# POSIX Compliant Shells!
+# Bash
+cat posix-bash
+./posix-bash
 
-# The OG Bourne Shell
-cat hello-sh
-./hello-sh
+# Dash / Debian Almquist Shell (Strict POSIX compliance)
+cat posix-dash
+./posix-dash
 
-# Ubiquitous
-cat hello-bash
-./hello-bash
+# Bourne Shell
+cat posix-sh
+./posix-sh
+# Why did that work? Careful of symlinks
+ls -a /usr/bin/sh 
 
-# Default on MacOS
-cat hello-zsh
-./hello-zsh
-
-# Does anyone actually use KornShell???
-cat hello-ksh
-./hello-ksh
-```
-
-The following scripts will execute with Non-POSIX compliant shells.
-
----
-
-### Not POSIX Compliant
-
-```bash
-# Non-POSIX Compliant Shells
-
-# Fish Shell
-cat hello-fish
-./hello-fish
-
-# Good ol' PowerShell
-cat hello-pwsh
-./hello-pwsh
+# Our beloved PowerShell
+cat posix-pwsh
+./posix-pwsh
 ```
 
 ---
 
-If PowerShell (or Fish) were to adhere to POSIX compliance standards, 
-then the declaration of the variable would have worked.
+## For Fun
 
-*Bonus*: [Watch People Argue Over POSIX Compliance](https://news.ycombinator.com/item?id=26744919)
+- *Bonus*: [Watch People Argue Over POSIX Compliance](https://news.ycombinator.com/item?id=26744919)
+- There are shell compatibility checkers like [ShellCheck.net](https://www.shellcheck.net/)

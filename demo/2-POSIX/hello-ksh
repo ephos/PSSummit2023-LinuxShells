@@ -1,6 +1,0 @@
-#!/bin/ksh
-
-message="Hello Summit from Korn Shell!"
-echo "$message"
-
-df -h | grep "/boot"
